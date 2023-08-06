@@ -1,0 +1,34 @@
+// ==UserScript==
+// @name         MatterBot
+// @namespace    https://greasyfork.org/
+// @version      0.3
+// @description  MatterBot
+// @author       Fenix - #0000
+// @include      *://multiplayerpiano.com/*
+// @include      *://mppclone.com/*
+// @include      *://mpp.hyye.tk/*
+// @icon         http://imageshack.com/a/img923/4396/i1Wmrm.png
+// @grant        none
+// ==/UserScript==
+var adminarray = [];
+MPP.client.on("a", function(msg) {
+    var asgr = msg.a.split(' ');
+    var cmd = asgr[0];
+    var input = msg.a.substring(cmd.length).trim();
+
+if (cmd == "/help") {
+    MPP.chat.send("By topic: /end /yt /gt /d.")
+}
+if (cmd == "/end") {
+    MPP.chat.send("February 1, 2029")
+}
+if (cmd == "/yt") {
+    MPP.chat.send("https://youtube.com/@0fenix")
+}
+if (cmd == "/gt") {
+    MPP.chat.send("https://github.com/NoneFeLiX")
+}
+if (cmd == "/d") {
+    MPP.chat.send("https://discord.gg/eY8cE5Y7")
+}}
+                     ) /*msg.a. response end*/
