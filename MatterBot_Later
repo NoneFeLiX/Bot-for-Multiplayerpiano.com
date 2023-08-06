@@ -1,0 +1,47 @@
+// ==UserScript==
+// @name         MatterBot
+// @namespace    https://greasyfork.org/
+// @version      0.3
+// @description  MatterBot
+// @author       Fenix - #0000
+// @include      *://multiplayerpiano.com/*
+// @include      *://mppclone.com/*
+// @include      *://mpp.hyye.tk/*
+// @icon         http://imageshack.com/a/img923/4396/i1Wmrm.png
+// @grant        none
+// ==/UserScript==
+var adminarray = [];
+MPP.client.on("a", function(msg) {
+    var asgr = msg.a.split(' ');
+    var cmd = asgr[0];
+    var input = msg.a.substring(cmd.length).trim();
+
+if (cmd == "/help") {
+    MPP.chat.send("Commands are: /help /info /qu /name /id /color /hi /bye /matter.")
+}
+if (cmd == "/info") {
+    MPP.chat.send("More detailed - https://t.me/+an_k4NesPBk3OGFi")
+}
+if (cmd == "/qu") {
+    MPP.chat.send("In the Telegram - https://t.me/@coffeezxc")
+}
+if (cmd == "/name") {
+    MPP.chat.send("Your name is: " + msg.p.name)
+}
+if (cmd == "/id") {
+    MPP.chat.send("Your id is: " + msg.p.id)
+}
+if (cmd == "/color") {
+    MPP.chat.send("Your color is: " + msg.p.color)
+}
+if (cmd == "/hi") {
+    MPP.chat.send("You're a f*ggot, " + msg.p.name + "!")
+}
+if (cmd == "/bye") {
+    MPP.chat.send("fuck you, " + msg.p.name + " :)")
+}
+if (cmd == "/matter") {
+    MPP.chat.send("Matter is a crypipasta invented by the creator of this bot. You can learn more through the bot!")
+}
+}
+                     ) /*msg.a. response end*/
